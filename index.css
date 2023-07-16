@@ -1,0 +1,220 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    background-color: aqua;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.header { 
+    text-align: center ;
+    height: 50px;
+    line-height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    /* how to make it italic     */
+    font-style: italic;
+}
+nav { 
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px ;
+    padding: 0 1rem;
+    font-style: italic;
+    position: sticky;
+    top : 0px ; 
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    min-width: fit-content ;
+    gap : 3rem ;
+    text-transform: uppercase;
+}
+
+.side {
+   
+    border-right: 2px solid rgb(184, 179, 179);
+    
+}
+
+.phone {
+    position: fixed;
+    top: 0px ; 
+    width: 90%;
+    background-color: black;
+    height: 100vh ; 
+    z-index: 4 ;
+    display: grid;
+    align-items: start;
+    color : yellow ; 
+    
+}
+
+.hidden {
+    display: none;
+}
+.products {
+
+    background-color : aquamarine ;
+    padding: 10px 0px ;
+    display: grid;
+  
+}
+
+.projects {
+  background-color: aquamarine;
+  padding : 10px  ;
+  margin : 5px 0px ;    
+  display: grid ;
+}
+
+.card {
+    width : 300px;
+    margin: auto;
+    margin-top: 5px ;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    padding : 2px ; 
+    border-radius: 5px;
+}
+
+.card:hover {
+    transform: scale(1.1) rotate(5deg) ;
+    transition: all  0.4s ;
+}
+.card-img {
+    border-bottom: 1px solid gray;
+}
+.card img {
+    width: 100%;
+    padding: 5px;
+}
+
+
+.card-details {
+    background-color: teal  ;
+    opacity: 80% ;  
+    color : black  ;
+    padding : 0px 3px ;  
+}
+
+.card-title {
+    font-weight: 500;
+    text-align: center ; 
+    padding: 5px 0px ;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    padding: 5px 0px ;
+
+}
+
+.footer {
+    margin-top: 5px ;
+    padding : 10px 15px ; 
+    display: grid ; 
+    grid-template-columns: 1fr 1fr  ;
+    gap : 5px ;
+    justify-content: space-around;
+    opacity: 80% ;
+}
+
+.about {
+    text-align: center;
+}
+
+.title {
+    text-align: center ;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 5px 0px ;
+    text-transform: uppercase;
+    font-style: italic;
+    text-decoration: underline 1px  solid ;
+    height: 100px ;
+    line-height: 100px ;
+
+}
+
+.about {
+    text-align: center;
+}
+
+.footer-text {
+    /* justify text */
+    text-align: justify;
+}
+
+/* media query of min with of 760px  */
+
+@media screen and (min-width: 760px) {
+    .side {
+        display: block ;
+    }
+    .products , .projects {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+
+    .title {
+        /* col span 2    */
+        grid-column: span 3 ; 
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+        gap: 5px;
+    }
+    
+    .icon {
+        display: none ;
+    }
+}
+
+.side-list {
+    list-style-type: none;
+    padding: 0px 5px ;
+}
+
+.side-list li {
+    padding: 5px 0px ;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+    padding: 5px ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    font-style: italic;
+    margin-top: 5px  ;
+}
+
+.side-list li:hover {
+    background-color: aqua;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+ 
+}
+
+
+.icon {
+    cursor: pointer;
+    width: 24px ;
+    height: 24px ;
+}
+
+.hiden {
+    visibility: none;
+}
